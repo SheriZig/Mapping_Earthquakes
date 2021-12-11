@@ -24,28 +24,44 @@ let map = L.map('mapid').setView([40.7, -94.5], 4);
   // radius: 300
 //}).addTo(map);
 
-let cityData = cities;
+// An array containing each city's location, state, and population.
+let cities = [{
+  location: [40.7128, -74.0059],
+  city: "New York City",
+  state: "NY",
+  population: 8398748
+},
+{
+  location: [41.8781, -87.6298],
+  city: "Chicago",
+  state: "IL",
+  population: 2705994
+},
+{
+  location: [29.7604, -95.3698],
+  city: "Houston",
+  state: "TX",
+  population: 2325502
+},
+{
+  location: [34.0522, -118.2437],
+  city: "Los Angeles",
+  state: "CA",
+  population: 3990456
+},
+{
+  location: [33.4484, -112.0740],
+  city: "Phoenix",
+  state: "AZ",
+  population: 1660272
+}
+];
 // Loop through the cities array and create one marker for each city.
 //function(city) is the whole city (in cities array) with specifics (location/city/state/population)
 //city.location points to the city function and returns only the location 
-//.bindPopup binds popup text to marker contains concatenated info from data file
-// bindPopup displays when marker is clicked
-// population.toLocaleString adds a 'thousands' separator for the population
-// changed from l.marker to l.cityMarker to change to circle with the size determined
-//    by the population however, based on the size of the population, the circle would 
-//    cover the whole map. Therefore we divide to find a proportional size
-cityData.forEach(function(city){
+cities.forEach(function(city){
     console.log(city);
-    L.circleMarker(city.location,{
-      radius: city.population/100000,
-      color: 'orange',
-      fillColor: '#F5B041' ,
-      fillOpacity: 0.5,
-      lineweight: 4
-
-    })
-    .bindPopup("<h2>" + city.city + "," + city.state +"</h2> <hr> <h3>Population " + city.population.toLocaleString() + "</h3>")
-    .addTo(map);
+    L.marker(city.location).addTo(map)
 });
 
 // We create the tile layer that will be the background of our map.
