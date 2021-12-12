@@ -26,48 +26,21 @@ let baseMaps = {
 //Alternative method using curly braces notation
 //Create the map object with a center and zoom level
 let map = L.map("mapid",{
-    center: [43.7,-79.3],
-    zoom: 11,
-    layers: [satelliteStreets]
+    center: [39.5, -98.5],
+    zoom: 3,
+    layers: [streets]
 })
 
 // Pass our map layers into our LAYERS CONTROL and add the layers control to the map.
 L.control.layers(baseMaps).addTo(map);
 
-let torontoHoods =  "https://raw.githubusercontent.com/SheriZig/Mapping_Earthquakes/main/torontoNeighborhoods.json";
 
-// note: putting the data after the tilelayer loads map before adding data
-//access majorAirports.json
-//let airportData = "https://raw.githubusercontent.com/SheriZig/Mapping_Earthquakes/main/majorAirports.json";
 
-//apply style to lines and fill on map
-
-function polystyle(feature) {
-    return {
-        fillColor: 'yellow',
-        weight: 2,
-        opacity: 1,
-        color: 'blue',  //Outline color
-        fillOpacity: 0.7
-    };
-}
-
-//get GeoJSON data
-d3.json(torontoHoods).then(function(data){
+//get GeoJSON data from earthquake site
+d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson").then(function(data){
     console.log(data);
-
-    //Creating a GeoJSON layer with the retrieved data
-    //L.geoJSON(data).addTo(map);
-    L.geoJson(data, {
-        style: polystyle, 
-        onEachFeature: function(feature,layer){
-            layer.bindPopup( "Neighborhood: "  + feature.properties.AREA_NAME + "</h2> <hr> <h3>Area Code: " + feature.properties.AREA_S_CD + "</h3>"
-            )
- 
-         }
-    
-    
-    }).addTo(map);
+    //create geoJSON layer with data
+    L.geoJson(data).addTo(map);
 });
 
 console.log("done");
