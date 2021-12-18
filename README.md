@@ -21,3 +21,4 @@ The following steps were used for the project:
 ![image](https://user-images.githubusercontent.com/88912539/146642408-aa281dae-6abc-42c8-84ef-cae3367d7b05.png)
 
 ## Satellite layer with Tectonic Plate and Major Earthquakes layer 
+![image](https://user-images.githubusercontent.com/88912539/146642497-3bb6314c-e867-4ff4-bc26-7a9c4f7076fe.png)
