@@ -13,5 +13,8 @@ The following steps were used for the project:
 - Create multiple data layers: Earthquakes, Tectonic Plates, Major earthquakes
 - Create multiple base map layers: Streets, Satellite, Dark View 
 
-## Results
+
+## Street Layer background with earthquake data 
+![image](https://user-images.githubusercontent.com/88912539/146642311-af8c3aef-da41-4f13-abb6-2e2e5fc79697.png)
+
 
