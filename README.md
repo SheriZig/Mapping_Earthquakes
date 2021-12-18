@@ -14,11 +14,11 @@ The following steps were used for the project:
 - Create multiple base map layers: Streets, Satellite, Dark View 
 
 
-## Streets Layer with all Earthquake and Tectonic Plate layers 
+## Streets background with Earthquake and Tectonic Plate layers 
 ![image](https://user-images.githubusercontent.com/88912539/146642311-af8c3aef-da41-4f13-abb6-2e2e5fc79697.png)
 
-## Dark layer with Earthquake only layer 
+## Dark background with Earthquake layer 
 ![image](https://user-images.githubusercontent.com/88912539/146642408-aa281dae-6abc-42c8-84ef-cae3367d7b05.png)
 
-## Satellite layer with Tectonic Plate and Major Earthquakes layer 
+## Satellite background with Tectonic Plate and Major Earthquakes layer 
 ![image](https://user-images.githubusercontent.com/88912539/146642497-3bb6314c-e867-4ff4-bc26-7a9c4f7076fe.png)
